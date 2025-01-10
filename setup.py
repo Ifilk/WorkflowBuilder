@@ -5,12 +5,13 @@ setup(
     version='0.1',
     author='Ifilk',
     author_email='suanxc@yeah.net',
-    description='WorkflowBuilder is a tool for building and executing workflows. '
-                'It allows users to create complex workflows by defining configuration classes, '
-                'task classes, and workflows, and can easily manage and execute these workflows. ',
-    long_description=open('README.txt').read(),
+    url='https://github.com/Ifilk/WorkflowBuilder',
+    description='A tool for building and executing workflows',
+    long_description=open('readme.md').read(),
+    long_description_content_type='text/markdown',
     packages=find_packages(),
     install_requires=[
         'toml',
-    ]
+    ],
+    python_requires='>=3.6',
 )
