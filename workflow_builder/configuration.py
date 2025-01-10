@@ -4,7 +4,10 @@ from os import PathLike
 from pathlib import Path
 from typing import Type, Union
 
-import toml
+try:
+    import tomllib
+except ImportError:
+    import toml
 
 from workflow_builder.logger import logger
 from workflow_builder.utils import match_names
