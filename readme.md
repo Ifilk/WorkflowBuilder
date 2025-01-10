@@ -9,7 +9,7 @@ WorkflowBuilder 是一个用于构建和执行工作流的工具。它允许用�
 确保你已经安装了 Python 3.6+，然后可以通过 pip 安装 WorkflowBuilder：
 
 ```bash
-pip install workflow_builder
+pip install workflow-builder
 ```
 ## 使用示例
 
