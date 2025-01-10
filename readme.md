@@ -17,8 +17,7 @@ pip install workflow_builder
 
 首先，定义一个配置类来存储工作流中需要使用的配置信息。这里我们定义了一个名为 `ExampleConfiguration` 的配置类，其中包含一个 `greeting` 字段。
 
-```
-python
+```python
 from workflow_builder import configclass, Configuration
 
 # 参数指定别名
@@ -34,8 +33,7 @@ class ExampleConfiguration(Configuration):
 
 `ExampleTask1` 是一个具体的任务类，它在执行前会从工作流的配置管理器中获取 `ExampleConfiguration`，并在 `work` 方法中返回一个字典，包含处理结果。
 
-```
-python
+```python
 class ExampleTask1(Task):
     def __init__(self, task_config: TaskConfig):
         task_config.name = ''
@@ -54,8 +52,7 @@ class ExampleTask1(Task):
 
 `ExampleTask` 是另一个任务类，它在 `work` 方法中接收来自 `ExampleTask1` 的输出并打印出来。
 
-```
-python
+```python
 class ExampleTask(Task):
     def __init__(self):
         ...
@@ -70,8 +67,7 @@ class ExampleTask(Task):
 
 最后，将任务类添加到工作流中，并创建和执行管道。
 
-```
-python
+```python
 tasks = [
     ExampleTask1,
     ExampleTask
