@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import Type, Union
 
 try:
-    import tomllib
+    import tomllib as toml
 except ImportError:
     import toml
 
