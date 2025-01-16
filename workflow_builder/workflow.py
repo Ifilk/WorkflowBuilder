@@ -109,9 +109,9 @@ class Pipeline:
         for group in self.task_mesh:
             if not self.asynchronous and len(group) > 1:
                 raise NotSupportedException('asynchronous')
-            else:
+            elif len(group) > 1:
                 # TODO async support
-                ...
+                raise NotSupportedException('Async support')
             result = group[0].work(_shared_parameters=self.shared_parameters)
             if result:
                 self.shared_parameters.update(result)

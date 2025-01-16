@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='workflow_builder',
-    version='0.1',
+    version='0.11',
     author='Ifilk',
     author_email='suanxc@yeah.net',
     url='https://github.com/Ifilk/WorkflowBuilder',
