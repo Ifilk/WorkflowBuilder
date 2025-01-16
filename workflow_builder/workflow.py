@@ -90,7 +90,7 @@ class Pipeline:
     def __init__(self, task_instances: Iterable[Task], workflow,
                  shared_parameters=None, asynchronous=False):
         self.asynchronous = asynchronous
-        self.shared_parameters = {'workflow': workflow}
+        self.shared_parameters = {'pipeline': self}
         if shared_parameters:
             self.shared_parameters.update(shared_parameters)
         task_mesh = []

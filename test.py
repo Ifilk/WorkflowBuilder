@@ -15,7 +15,7 @@ class ExampleTask1(Task):
     def preprocess(self, workflow: Workflow):
         self.config = workflow.config_manager[ExampleConfiguration]
 
-    def work(self, workflow):
+    def work(self, pipeline):
         return {
             'example_task1': self.config.greeting + ' World'
         }
